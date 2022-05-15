@@ -1,9 +1,13 @@
 import datetime
 
 def hellouser():
-    print("Biletgo ya hoş geldiniz")
+    h="Biletgo'ya hoş geldiniz"
+    hnew=h.center(40,'*')
+    print(hnew)
     saatgun = datetime.datetime.now()
     tarih = datetime.datetime.strftime(saatgun, '%c')
-    print(F"Güncel tarih ve saat bilgisi {tarih}")
-
+    info=f"{tarih}".center(40,'*')
+    print(info)
+    
 hellouser()
+
