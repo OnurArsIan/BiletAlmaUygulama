@@ -1,5 +1,6 @@
 import datetime
 import sqlite3
+from tkinter.tix import LabelEntry
 
 def hellouser():
     h="Biletgo'ya hoş geldiniz"
@@ -31,7 +32,7 @@ def biletal():
  
     bostarihler=["12.12.22","15.05.22","16.05.22"]
     bosrota=["ankara-izmir","istanbul-adana","izmir-ankara"]
-    dolurota=[]
+    dolurota = []
     satılanb=0
     tarih= input("   Tarih giriniz(gg.aa.yy):")
     rotas=input("   rota giriniz(baslangıc-bitis):")
@@ -44,13 +45,38 @@ def biletal():
           dolurota.append(rotas)               
        else:
           print("   !!biletler tükenmiştir veya mevcut bilet yoktur!!")
-          
+    
+    return dolurota,tarih,satılanb
+
+        
 def sıksorulansorular():
     
     sorular=["1-ASDASDASDASDASDASD","2-SDSADASDASDASDASD","3-ASDASDASDASDASD"]
         
     for xxx in sorular:
             print(xxx)
+            
+def sikayetveonerihattı():
+       
+ kullanıcılar= {}
+ 
+ posta=input("kullanıcı e-posta: ")
+ name=input("kullanıcı adı: ")
+ surname=input("kullanıcı soyadı: ")
+ info=input("Kullanıcı sikayet veya öneri: ")
+ 
+ kullanıcılar[posta] ={
+
+    "ad": name,
+    "soyad" :surname,
+    "sikayetveyaöneri" :info,
+
+
+ }
+ print(kullanıcılar)
+
+
+
             
     
 def menu():
@@ -59,7 +85,7 @@ def menu():
     
        -bilet almak için (1)
        -BiletGo sıkça sorulan sorular için (2)
-       -Gün sonu raporu(sadece yetkililer) (3)
+       -Sikayet ve öneri hattı(3)
        """)
        print("\n \n")
        karar=int(input("   tuşlayınız:"))
@@ -67,10 +93,12 @@ def menu():
 
        
        if karar==1:
-        biletal()
         usersqlite()
+        biletal()
        elif karar==2:
         sıksorulansorular()
+       elif karar==3:
+        sikayetveonerihattı()
         
 menu()
            
