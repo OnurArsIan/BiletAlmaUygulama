@@ -1,24 +1,29 @@
-from distutils.log import info
 
+def kuponsorgu():
+ class kuponsorgula:
+    adress="no info"
+        
 
-def sikayetveonerihattı():
-   
- kullanıcılar= {}
- 
- posta=input("kullanıcı e-posta: ")
- name=input("kullanıcı adı: ")
- surname=input("kullanıcı soyadı: ")
- info=input("Kullanıcı sikayet veya öneri: ")
- 
- kullanıcılar[posta] ={
+    def __init__(self,kupon):
+        self.kupon=kupon
+        
 
-    "ad": name,
-    "soyad" :surname,
-    "sikayetveyaöneri" :info,
+    def intro(self):
+        print("Merhaba kupon sorgulama ekranına Hoş geldiniz\n")   
 
+    def sorgula(self):
+        kuponlar=["Metro20","KamilKoç30","pamukkale10"]
+        if (self.kupon in kuponlar):
+            print("kuponunuz geçerlidir.\n Bilet Almadan önce vezne görevlisine bildiriniz.")
+        else:
+            print("kupon geçersiz")      
+         
 
- }
- print(kullanıcılar)
+            
+        
+        
 
-
-sikayetveonerihattı()
+ p1=kuponsorgula(kupon=input("kupon giriniz:"))
+ p1.sorgula()
+    
+kuponsorgu()

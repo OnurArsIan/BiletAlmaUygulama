@@ -56,6 +56,33 @@ def sıksorulansorular():
     for xxx in sorular:
             print(xxx)
             
+def kuponsorgu():
+    class kuponsorgula:
+     adress="no info"
+        
+
+     def __init__(self,kupon):
+        self.kupon=kupon
+        
+
+     def intro(self):
+        print("Merhaba kupon sorgulama ekranına Hoş geldiniz\n")   
+
+     def sorgula(self):
+        kuponlar=["Metro20","KamilKoç30","pamukkale10"]
+        if (self.kupon in kuponlar):
+            print("kuponunuz geçerlidir.\n Bilet Almadan önce vezne görevlisine bildiriniz.")
+        else:
+            print("kupon geçersiz")
+         
+
+            
+        
+        
+
+    p1=kuponsorgula(kupon=input("kupon giriniz:"))
+    p1.sorgula()
+            
 def sikayetveonerihattı():
        
  kullanıcılar= {}
@@ -81,14 +108,15 @@ def sikayetveonerihattı():
     
 def menu():
     while True:
-       print("""
-    
+       print("""\n 
        -bilet almak için (1)
-       -BiletGo sıkça sorulan sorular için (2)
-       -Sikayet ve öneri hattı(3)
+       -Kupon Sorgulama (2)
+       -BiletGo sıkça sorulan sorular için (3)
+       -Sikayet ve öneri hattı(4)
+       
        """)
        print("\n \n")
-       karar=int(input("   tuşlayınız:"))
+       karar=int(input("tuşlayınız:"))
        print("\n \n")
 
        
@@ -96,8 +124,10 @@ def menu():
         usersqlite()
         biletal()
        elif karar==2:
-        sıksorulansorular()
+         kuponsorgu()  
        elif karar==3:
+        sıksorulansorular()
+       elif karar==4:
         sikayetveonerihattı()
         
 menu()
