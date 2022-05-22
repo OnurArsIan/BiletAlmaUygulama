@@ -25,6 +25,33 @@ def usersqlite():
             im.execute("""INSERT INTO users VALUES (?,?,?,?)""",x)
             vt.commit() 
     print("kaydınız tamamlanmıştır.")
+
+def biletal():
+    
+ 
+    bostarihler=["12.12.22","15.05.22","16.05.22"]
+    bosrota=["ankara-izmir","istanbul-adana","izmir-ankara"]
+    dolurota=[]
+    satılanb=0
+    tarih= input("   Tarih giriniz(gg.aa.yy):")
+    rotas=input("   rota giriniz(baslangıc-bitis):")
+    print("\n \n")
+    for x in range(1):
+       if tarih in bostarihler and rotas in bosrota:
+          print("   !!Mevcut bilet vardır!!")
+          print("bilet rezerve edilmiştir")
+          satılanb+=1
+          dolurota.append(rotas)               
+       else:
+          print("   !!biletler tükenmiştir veya mevcut bilet yoktur!!")
+          
+def sıksorulansorular():
+    
+    sorular=["1-ASDASDASDASDASDASD","2-SDSADASDASDASDASD","3-ASDASDASDASDASD"]
+        
+    for xxx in sorular:
+            print(xxx)
+            
     
 def menu():
     while True:
@@ -37,4 +64,13 @@ def menu():
        print("\n \n")
        karar=int(input("   tuşlayınız:"))
        print("\n \n")
-       usersqlite()
+
+       
+       if karar==1:
+        biletal()
+        usersqlite()
+       elif karar==2:
+        sıksorulansorular()
+        
+menu()
+           
