@@ -9,6 +9,13 @@
 * Class yapısı
 * Datetime kütüphanesi
 ----
+## İşleyiş
+* Bilet almadan önce kullanıcı kaydı alınıp Sqlite da tabloya göndirlmektedir.
+* Bilet alma menüsü liste mantığı ile çalışmaktadır
+* sikayet ve öneri kısmında sözlük yapısından faydalanılmıştır
+* Her işlemden sonra yeniden ana menüye dönmektedir bu sayede uygulama sürekli çalışır haldedir.
+
+----
 ## ilk menü
 ![ilkmenü](https://user-images.githubusercontent.com/101180986/169695411-260cd4ca-3fe8-4a9f-a0c2-b02acff667b3.png)
 ---
